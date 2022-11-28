@@ -55,11 +55,7 @@ jobs:
       - name: Create semantic_release_version.txt file
         run: touch semantic_release_version.txt
 
-      - name: Release
-        id: semantic_release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release --debug
+ 
 
       - name: Get the version
         id: get_version
